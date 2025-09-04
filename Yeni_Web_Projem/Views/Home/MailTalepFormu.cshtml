@@ -1,0 +1,82 @@
+﻿
+@model Yeni_Web_Projem.Views.Home.MailTalepFormuModel
+@{
+	<h2> Mail talep formu aşağıdadır.</h2>
+}
+
+<h2>Kullanıcı Bilgileri</h2>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Kullanıcı Bilgileri</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="SubmitForm" method="post">
+                        <div class="mb-3">
+                            <label for="FirstName" class="form-label">İsim</label>
+                            <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="LastName" class="form-label">Soyisim</label>
+                            <input type="text" class="form-control" id="LastName" name="LastName" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">E-Posta</label>
+                            <input type="email" class="form-control" id="Email" name="Email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Phone" class="form-label">Telefon Numarası</label>
+                            <input type="tel" class="form-control" id="Phone" name="Phone" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="KullaniciTipi" class="form-label">Kullanıcı Tipi</label>
+                            <select class="form-select" id="KullaniciTipi" name="KullaniciTipi" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="Akademi">Akademi</option>
+                                <option value="Sürekli işçi">Sürekli işçi</option>
+                                <option value="İdari">İdari</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Unit" class="form-label">Talep Edilen E-psta Tipi</label>
+                            <select class="form-select" id="Unit" name="Unit" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="Kişisel Eposta">Kişisel eposta</option>
+                                <option value="Etkinlik Epostası">Etkinlik epostası</option>
+                                <option value="Birim/Topluluk Epostası">Birim/Topluluk Epostası</option>
+                            </select>
+                        </div> 
+
+                        <div class="mb-3">
+                            <label for="Type" class="form-label">Açıklama</label>
+                            <input type="text" class="form-control" id="Type" name="Type" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Gönder</button>
+                        <script>
+                            function showAlert() {
+                                alert("Bu bir pop-up mesajıdır!");
+
+                                // Veya daha gelişmiş bir alert
+                                Swal.fire({
+                                    title: 'Başarılı!',
+                                    text: 'İşlem tamamlandı',
+                                    icon: 'success',
+                                    confirmButtonText: 'Tamam'
+                                });
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

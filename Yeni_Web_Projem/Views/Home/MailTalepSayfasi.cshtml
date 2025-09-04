@@ -1,0 +1,56 @@
+﻿
+@model Yeni_Web_Projem.Views.Home.MailTalepSayfasiModel
+
+@{
+    ViewData["Title"] = "Mail Talep Sayfası";
+}
+
+<p>Mail Taleplerini burada göreceksiniz.</p>
+
+
+<div class="card">
+    <div class="card-header bg-info text-white align-items-center justify-content-between">
+        <h4>Yönettiğiniz Email Hesapları</h4>
+        <button type="submit" class="btn btn-primary btn-sm">
+            <i class="bi bi-check"></i> <!-- ikon -->
+        </button>
+
+    </div>
+    <!-- <div class="form-group">
+        <button type="submit" class="btn btn-primary w-100">E-posta yetkisi talep et</button>
+    </div> -->
+    <div class="card-body">
+        <p class="card-text">Burada sorumlu olduğunuz email hesaplarını görebilirsiniz.</p>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Email Adresi</th>
+                        <th>Oluşturulma Tarihi</th>
+                        <th>Açıklama</th>
+                        <th>Tip</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ornek1@firma.com</td>
+                        <td>01.01.2023</td>
+                        <td>Genel iletişim hesabı</td>
+                        <td>Genel</td>
+                    </tr>
+                    <tr>
+                        <td>destek@firma.com</td>
+                        <td>15.03.2023</td>
+                        <td>Müşteri destek birimi</td>
+                        <td>Destek</td>
+                    </tr>
+                    <tr>
+                        <td>satis@firma.com</td>
+                        <td>22.05.2023</td>
+                        <td>Satış departmanı</td>
+                        <td>Satış</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
